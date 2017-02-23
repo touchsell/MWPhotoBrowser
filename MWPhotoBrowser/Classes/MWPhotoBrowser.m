@@ -1162,10 +1162,10 @@
 
     // Hide action button on nav bar if it exists
     if (self.navigationItem.leftBarButtonItem == _actionButton) {
-        _gridPreviousLeftNavItem = _actionButton;
+        _gridPreviousRightNavItem = _actionButton;
         [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     } else {
-        _gridPreviousLeftNavItem = nil;
+        _gridPreviousRightNavItem = nil;
     }
 
     // Update
@@ -1193,7 +1193,7 @@
 
     // Restore action button if it was removed
     if (_gridPreviousRightNavItem == _actionButton && _actionButton) {
-        [self.navigationItem setLeftBarButtonItem:_gridPreviousLeftNavItem animated:YES];
+        [self.navigationItem setLeftBarButtonItem:_gridPreviousRightNavItem animated:YES];
     }
 
     // Position prior to hide animation
